@@ -1,0 +1,77 @@
+site_name: "NUS Coursework Wiki"
+site_description: "NUS Computer Engineering coursework records and deliverables"
+site_author: "Kytolly"
+docs_dir: ../build/preview/docs
+site_dir: ../build/preview/site
+use_directory_urls: false
+
+theme:
+  name: material
+  language: zh
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/vendor/mermaid-11.17.2.min.js
+  - javascripts/mermaid.js
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - 首页:
+      - 课程仪表盘: index.md
+      - Wiki 状态: Wiki状态.md
+  - CEG5201:
+      - 课程总览: CEG5201-课程总览.md
+      - 课程资源:
+          - 资源总览: CEG5201-课程资源总览.md
+          - 课件与讲义: CEG5201-课件与讲义.md
+          - CA 与项目文件: CEG5201-CA与项目文件.md
+          - Canvas、课程链接与工具: CEG5201-Canvas课程链接与工具.md
+      - 课程要求与截止日期: CEG5201-课程要求与截止日期.md
+      - CA1 Consultation:
+          - 总览: CEG5201-CA1-Consultation-总览.md
+          - 项目要求: CEG5201-CA1-Consultation-项目要求.md
+          - Topics Guide: CEG5201-CA1-Consultation-Topics-Guide.md
+          - 提交物与截止日期: CEG5201-CA1-Consultation-提交物与截止日期.md
+          - 问题清单: CEG5201-CA1-Consultation-问题清单.md
+          - 教师答复与行动项: CEG5201-CA1-Consultation-教师答复与行动项.md
+      - 讲义与笔记索引: CEG5201-讲义与笔记索引.md
+      - Week 01:
+          - 为什么需要现代并行平台: CEG5201-Week01-为什么需要现代并行平台.md
+          - 嵌入式系统与计算平台选择: CEG5201-Week01-嵌入式系统与计算平台选择.md
+          - 性能度量与可扩展性: CEG5201-Week01-性能度量与可扩展性.md
+      - Week 02:
+          - 任务可分性与数据依赖: CEG5201-Week02-任务可分性与数据依赖.md
+          - Bernstein 条件与软件并行性: CEG5201-Week02-Bernstein条件与软件并行性.md
+          - 粒度、通信与网络指标: CEG5201-Week02-粒度通信与网络指标.md
+      - Week 03:
+          - MIN 的结构与路由: CEG5201-Week03-MIN结构与路由.md
+          - Blocking 与 CLOS: CEG5201-Week03-Blocking与CLOS.md
+          - R/C 粒度比与性能模型: CEG5201-Week03-RC粒度比与性能模型.md
+      - 当前进度与待补内容: CEG5201-当前进度与待补内容.md

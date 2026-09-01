@@ -9,6 +9,8 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+.playwright-cli/
+output/playwright/
 develop-eggs/
 dist/
 downloads/
