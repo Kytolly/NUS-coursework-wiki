@@ -75,3 +75,33 @@ nav:
           - Blocking 与 CLOS: CEG5201-Week03-Blocking与CLOS.md
           - R/C 粒度比与性能模型: CEG5201-Week03-RC粒度比与性能模型.md
       - 当前进度与待补内容: CEG5201-当前进度与待补内容.md
+  - CEG5302:
+      - 课程总览: CEG5302-课程总览.md
+      - 课程资源:
+          - 资源总览: CEG5302-课程资源总览.md
+          - 课件与讲义: CEG5302-课件与讲义.md
+      - 课程要求与截止日期: CEG5302-课程要求与截止日期.md
+      - 讲义与笔记索引: CEG5302-讲义与笔记索引.md
+      - Lecture 01:
+          - 进化计算导论: CEG5302-Lecture01-进化计算导论.md
+          - 自然进化隐喻与基本循环: CEG5302-Lecture01-自然进化隐喻与基本循环.md
+          - 四类问题与工程应用: CEG5302-Lecture01-四类问题与工程应用.md
+      - Lecture 02:
+          - 问题类型与单目标优化: CEG5302-Lecture02-问题类型与单目标优化.md
+          - 计算复杂度与进化计算动机: CEG5302-Lecture02-计算复杂度与进化计算动机.md
+          - EA 七大组件: CEG5302-Lecture02-EA七大组件.md
+          - Canonical GA 与手算示例: CEG5302-Lecture02-CanonicalGA与手算示例.md
+      - Lecture 03:
+          - 表示的概念与选择准则: CEG5302-Lecture03-表示的概念与选择准则.md
+          - Binary 与 Integer 表示: CEG5302-Lecture03-Binary与Integer表示.md
+          - Real 表示的变异: CEG5302-Lecture03-Real表示的变异.md
+          - Real 表示的重组: CEG5302-Lecture03-Real表示的重组.md
+          - Permutation 表示: CEG5302-Lecture03-Permutation表示.md
+          - Tree 表示与 Crossover 一般结论: CEG5302-Lecture03-Tree表示与Crossover一般结论.md
+      - Lecture 04:
+          - 种群管理模型与 FPS 及 Ranking: CEG5302-Lecture04-种群管理模型与FPS及Ranking.md
+          - RWS 与 Tournament 等选择: CEG5302-Lecture04-RWS与Tournament等选择.md
+          - Survivor Selection 与选择压力: CEG5302-Lecture04-SurvivorSelection与选择压力.md
+          - 多样性维持与 Niching: CEG5302-Lecture04-多样性维持与Niching.md
+          - Island 与 Cellular EA 及 MATLAB: CEG5302-Lecture04-Island与CellularEA及MATLAB.md
+      - 当前进度与待补内容: CEG5302-当前进度与待补内容.md
