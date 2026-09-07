@@ -56,5 +56,5 @@ Swarm Intelligence（SI）模拟相互作用的同质 agents 及其觅食行为�
 
 ## 来源与更新日志
 
-- 来源：`Lecture 2a-Introduction_20Aug2026.pdf`，slides 33–49。
+- 来源：[Lecture 2a-Introduction_20Aug2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%202a-Introduction_20Aug2026.pdf)，slides 33–49。
 - 2026-09-03：从 Lecture 2a 拆出“计算复杂度与进化计算动机”短页。

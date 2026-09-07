@@ -53,7 +53,7 @@ flowchart TD
 
 - `_META.md` 是维护者使用的详细状态账本；本页是面向阅读者的状态摘要。
 - 正式来源优先级：assessment brief/rubric/公告 → 老师讲义 → 教师/TA 答复 → 个人笔记。
-- 原始课程文件保留在 `D:\Desktop\xqy\NUS\CEG5201` 与 `D:\AAA-xqy\NUS\CEG5302`；Wiki 默认只保存 Markdown 和经过选择的公开附件。
+- CEG5201 与 CEG5302 原始课程文件以各自的 GitHub Release 资产提供；Wiki 默认只保存 Markdown 和经过选择的公开附件。
 - 每次增加页面时同步更新 Home、`_Sidebar.md`、`_META.md` 和本页。
 
 ## 近期维护队列

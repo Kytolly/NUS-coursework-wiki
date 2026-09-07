@@ -56,5 +56,5 @@ P(i) = (2-s)/μ + 2i(s-1)/(μ(μ-1))
 
 ## 来源与更新日志
 
-- 来源：`Lecture 4-Selection and Population management_03Sept2026.pdf`，slides 5–24。
+- 来源：[Lecture 4-Selection and Population management_03Sept2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%204-Selection%20and%20Population%20management_03Sept2026.pdf)，slides 5–24。
 - 2026-09-03：从 Lecture 4 拆出“种群管理模型与 FPS 及 Ranking”短页。

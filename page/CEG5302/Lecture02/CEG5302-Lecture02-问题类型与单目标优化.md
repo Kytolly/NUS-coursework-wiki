@@ -51,5 +51,5 @@
 
 ## 来源与更新日志
 
-- 来源：`Lecture 2a-Introduction_20Aug2026.pdf`，slides 7–30。
+- 来源：[Lecture 2a-Introduction_20Aug2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%202a-Introduction_20Aug2026.pdf)，slides 7–30。
 - 2026-09-03：从 Lecture 2a 拆出“问题类型与单目标优化”短页。

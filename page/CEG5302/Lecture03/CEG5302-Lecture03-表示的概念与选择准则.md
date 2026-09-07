@@ -33,5 +33,5 @@
 
 ## 来源与更新日志
 
-- 来源：`Lecture 3-Representation and Variation_27Aug2026.pdf`，slides 4–11。
+- 来源：[Lecture 3-Representation and Variation_27Aug2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%203-Representation%20and%20Variation_27Aug2026.pdf)，slides 4–11。
 - 2026-09-03：从 Lecture 3 拆出“表示的概念与选择准则”短页。

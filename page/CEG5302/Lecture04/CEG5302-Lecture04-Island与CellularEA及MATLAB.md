@@ -33,5 +33,5 @@ MATLAB Global Optimization Toolbox 实现了 Simple GA（可带/不带约束）�
 
 ## 来源与更新日志
 
-- 来源：`Lecture 4-Selection and Population management_03Sept2026.pdf`，slides 85–104。
+- 来源：[Lecture 4-Selection and Population management_03Sept2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%204-Selection%20and%20Population%20management_03Sept2026.pdf)，slides 85–104。
 - 2026-09-03：从 Lecture 4 拆出“Island 与 Cellular EA 及 MATLAB”短页。

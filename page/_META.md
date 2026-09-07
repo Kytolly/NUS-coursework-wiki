@@ -38,11 +38,11 @@
 ## 课程来源
 
 - CEG5201 课程根目录：`D:\Desktop\xqy\NUS\CEG5201`；讲义 `1_LectureSlides/`，CA 文件 `2_CA_Documents/`，笔记 `notebook/`
-- CEG5302 课程根目录：`D:\AAA-xqy\NUS\CEG5302`；课件 `slides/`，笔记 `notes/lecture/`，要求 `list.md`
+- CEG5302 课程根目录：[CEG5302 Assets Release](https://github.com/Kytolly/NUS-coursework-wiki/releases/tag/CEG5302)；课件、笔记与 `list.md` 以 Release 资产提供
 
 ## Changelog
 
 - 2026-09-01：页面内容层改用 Markdown、Wiki 链接、表格、GitHub alerts 与 Mermaid，移除 HTML 卡片和状态容器。
 - 2026-09-01：固定本地 Mermaid 11.17.2、修复任意子页面的渲染时序，重构首页信息层级，并新增首页下的 Wiki 状态页面。
 - 2026-09-01：创建首批 Wiki；覆盖 CEG5201 资源、行政要求、CA1 Consultation 和 Week 01–03 短页面。
-- 2026-09-03：新增 CEG5302 课程命名空间；以老师课件（slides）为准、个人笔记为辅，拆分 Lecture 01–04 为 18 个知识页，并建立资源、要求、索引与进度页。
+- 2026-09-03：新增 CEG5302 课程命名空间；以老师课件（slides）为准、个人笔记为辅，拆分 Lecture 01–04 为 18 个知识页，并建立资源、要求、索引与进度页。`r`n- 2026-09-07：CEG5302 本地路径替换为预期 CEG5302 Assets Release 链接，并将课件引用改为具体下载地址。

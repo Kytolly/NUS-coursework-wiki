@@ -71,5 +71,5 @@ Parent selection 在 population 层面运行，产生 mating pool。质量较好
 
 ## 来源与更新日志
 
-- 来源：`Lecture 2b-EA components_20Aug2026.pdf`，slides 8–52。
+- 来源：[Lecture 2b-EA components_20Aug2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%202b-EA%20components_20Aug2026.pdf)，slides 8–52。
 - 2026-09-03：从 Lecture 2b 拆出“EA 七大组件”短页。

@@ -55,5 +55,5 @@ sharing function 常取 `sh(d) = 1 - (d/σ_share)^α`（当 `d < σ_share`，否
 
 ## 来源与更新日志
 
-- 来源：`Lecture 4-Selection and Population management_03Sept2026.pdf`，slides 67–84。
+- 来源：[Lecture 4-Selection and Population management_03Sept2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%204-Selection%20and%20Population%20management_03Sept2026.pdf)，slides 67–84。
 - 2026-09-03：从 Lecture 4 拆出“多样性维持与 Niching”短页。

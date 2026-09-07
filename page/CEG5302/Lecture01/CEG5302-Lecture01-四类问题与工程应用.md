@@ -46,5 +46,5 @@ candidate representation
 
 ## 来源与更新日志
 
-- 来源：`Lecture 1 - Introduction (D Srinivasan) 13Aug26.pdf`（扫描版），slides 37–66；slide 引用以个人笔记 `notes/lecture/lecture-01-introduction-zh.md` 记录为准。
+- 来源：[Lecture 1 - Introduction (D Srinivasan) 13Aug26.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%201%20-%20Introduction%20%28D%20Srinivasan%29%2013Aug26.pdf)（扫描版），slides 37–66；slide 引用以个人笔记 `notes/lecture/lecture-01-introduction-zh.md` 记录为准。
 - 2026-09-03：从 Lecture 1 拆出“四类问题与工程应用”短页。

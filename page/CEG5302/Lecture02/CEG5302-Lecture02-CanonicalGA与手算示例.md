@@ -56,5 +56,5 @@
 
 ## 来源与更新日志
 
-- 来源：`Lecture 2b-EA components_20Aug2026.pdf`，slides 53–72。
+- 来源：[Lecture 2b-EA components_20Aug2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%202b-EA%20components_20Aug2026.pdf)，slides 53–72。
 - 2026-09-03：从 Lecture 2b 拆出“Canonical GA 与手算示例”短页。

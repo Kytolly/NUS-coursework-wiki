@@ -60,5 +60,5 @@ Bit-string 编码，传统上被 GA 当作多数问题的唯一选择（历史�
 
 ## 来源与更新日志
 
-- 来源：`Lecture 3-Representation and Variation_27Aug2026.pdf`，slides 12–32。
+- 来源：[Lecture 3-Representation and Variation_27Aug2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%203-Representation%20and%20Variation_27Aug2026.pdf)，slides 12–32。
 - 2026-09-03：从 Lecture 3 拆出“Binary 与 Integer 表示”短页。
