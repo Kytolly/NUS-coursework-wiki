@@ -29,6 +29,37 @@ select mating pool -- recombination/mutation --> offspring
 
 七大组件为：representation、evaluation function、population、parent selection、variation operators（recombination + mutation）、survivor selection、termination condition。（Lecture 2b, slide 18）
 
+![EA 基本结构](assets/CEG5302/fig-002-ea-structure.png)
+
+**图：** EA 基本结构——初始随机种群 → 评估 → 父代选择 → 重组/变异产生后代 → 后代评估 → 生存选择形成新一代，循环直至满足终止条件。
+
+*来源：Lecture 2b-EA components_20Aug2026.pdf，第 8 页；核对 2026-09-07。*
+
+| 组件 | 课件页 | 作用 |
+|---|---|---|
+| Representation | 19–23 | 定义个体（genotype），phenotype→genotype 的可逆映射 |
+| Evaluation function | 24–25 | 量化个体质量，指导选择 |
+| Population | 26–30 | genotype 的多重集，随代数演化分布 |
+| Parent selection | 31–34 | 从种群选出 mating pool |
+| Variation operators | 35–45 | recombination（n 元）与 mutation（一元） |
+| Survivor selection | 46–48 | 确定下一代（replacement） |
+| Termination condition | 49–52 | 何时停止 |
+
+### 为什么 EA 是随机的
+
+EA 在每一环节都引入随机性（Lecture 2b, slides 30, 33, 38, 43, 48, 51）：随机初始化、概率性 parent selection、随机的 crossover 点与 mutation 位、随机 survivor。因此同一问题、同一配置，两次运行结果可能不同。这种随机性正是“探索新区域”的来源；开发者需要靠多次运行与统计来评估稳定性，而不是指望一次运行就得到全局最优。
+
+伪代码（依据 slides 29–36 整理；核对 2026-09-07）：
+
+```text
+P ← 随机初始化并评估
+while 终止条件未满足:
+    M ← parent_selection(P)          # 概率性，允许重复
+    O ← 用 M 做 recombination / mutation 生成
+    评估 O
+    P ← survivor_selection(P ∪ O)    # 固定规模 μ
+```
+
 ## Representation：phenotype 与 genotype
 
 - **Phenotype**：原问题领域中的 candidate solution。
@@ -71,5 +102,6 @@ Parent selection 在 population 层面运行，产生 mating pool。质量较好
 
 ## 来源与更新日志
 
-- 来源：[Lecture 2b-EA components_20Aug2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%202b-EA%20components_20Aug2026.pdf)，slides 8–52。
+- 来源：[Lecture 2b-EA components_20Aug2026.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture.2b-EA.components_20Aug2026.pdf)，slides 8–52；配图取自第 8 页。
 - 2026-09-03：从 Lecture 2b 拆出“EA 七大组件”短页。
+- 2026-09-07：嵌入 EA 基本结构原图（第 8 页）、新增七大组件功能对照表。

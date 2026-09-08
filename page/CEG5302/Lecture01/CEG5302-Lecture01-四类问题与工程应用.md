@@ -24,6 +24,25 @@ Scheduling 具有巨大的组合搜索空间、可行性约束和多个竞争性
 
 给定 model 与 inputs，simulation 计算不同情景下的 outputs，常用于动态环境中的 “what-if” 问题。进化计算也可生成控制器、虚拟生物、图像、音乐和结构设计，fitness 可由目标函数或人的偏好提供。（Lecture 1, slides 63–66）
 
+## 四类问题的统一框架
+
+四类问题都可以放进 `input → model → output` 三角结构（依据课件第 48、51、59、63 页整理；核对 2026-09-07）：
+
+```mermaid
+flowchart TD
+  A[工程问题] --> B["问题类型1: Scheduling<br/>模型已知、输入未知、输出未知<br/>需满足可行性"]
+  A --> C["问题类型2: Optimization<br/>模型已知、目标输出已知、输入待求<br/>卫星结构/天线/高铁"]
+  A --> D["问题类型3: Modeling<br/>输入输出已知、模型待求<br/>信用评估/股票策略/RoboCup"]
+  A --> E["问题类型4: Simulation<br/>模型与输入已知、输出未知<br/>虚拟生物/进化艺术"]
+```
+
+| 问题类型 | 课件页 | 关键特征 | 典型应用 |
+|---|---|---|---|
+| Scheduling | 48–50 | 搜索空间极大，需多个竞争指标 + 可行性 | 排课、航班调度 |
+| Optimization | 51–58 | 给定模型与目标，反求输入 | 卫星/天线/高铁 N700 |
+| Modeling | 59–62 | 由输入输出反推模型 | 信用评估、股票、RoboCup |
+| Simulation | 63–66 | 由模型+输入推输出（what-if） | 虚拟生物、进化艺术 |
+
 ## 工程应用的共同结构
 
 ```text
@@ -46,5 +65,6 @@ candidate representation
 
 ## 来源与更新日志
 
-- 来源：[Lecture 1 - Introduction (D Srinivasan) 13Aug26.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture%201%20-%20Introduction%20%28D%20Srinivasan%29%2013Aug26.pdf)（扫描版），slides 37–66；slide 引用以个人笔记 `notes/lecture/lecture-01-introduction-zh.md` 记录为准。
+- 来源：[Lecture 1 - Introduction (D Srinivasan) 13Aug26.pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/Lecture.1.-.Introduction.D.Srinivasan.13Aug26.pdf)（扫描版），slides 37–66；slide 引用以个人笔记 `notes/lecture/lecture-01-introduction-zh.md` 记录为准。
 - 2026-09-03：从 Lecture 1 拆出“四类问题与工程应用”短页。
+- 2026-09-07：新增四类问题统一框架 Mermaid 图与问题类型/应用对照表。

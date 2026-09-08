@@ -106,6 +106,10 @@ def main() -> None:
         dst = DOCS / ("index.md" if src.name == "Home.md" else src.name)
         dst.write_text(convert(src.read_text(encoding="utf-8")), encoding="utf-8")
         print(f"built {dst.name}")
+    assets_src = SRC / "assets"
+    if assets_src.exists():
+        shutil.copytree(assets_src, DOCS / "assets", dirs_exist_ok=True)
+        print("built assets/")
     css = DOCS / "stylesheets" / "extra.css"
     css.parent.mkdir(parents=True, exist_ok=True)
     css.write_text(EXTRA_CSS, encoding="utf-8")

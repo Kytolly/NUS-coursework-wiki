@@ -16,6 +16,12 @@ while IFS= read -r f; do
   seen[$base]=1
   cp "$f" "$TMP_DIR/$base"
 done < <(find "$PAGE_DIR" -type f -name '*.md' | sort)
+
+# copy image assets (page/assets/**) so images resolve in the Wiki repo
+if [ -d "$PAGE_DIR/assets" ]; then
+  cp -r "$PAGE_DIR/assets" "$TMP_DIR/assets"
+  echo "copied assets/"
+fi
 cd "$TMP_DIR"
 git add -A
 git -c user.name="${GIT_AUTHOR_NAME:-your-name}" -c user.email="${GIT_AUTHOR_EMAIL:-you@example.com}" commit -m "publish wiki" >/dev/null

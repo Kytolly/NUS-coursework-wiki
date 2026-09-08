@@ -46,6 +46,29 @@ nav:
   - 首页:
       - 课程仪表盘: index.md
       - Wiki 状态: Wiki状态.md
+  - CEG5104:
+      - 课程总览: CEG5104-课程总览.md
+      - 课程资源:
+          - 资源总览: CEG5104-课程资源总览.md
+          - 课件与讲义: CEG5104-课件与讲义.md
+      - 课程要求与截止日期: CEG5104-课程要求与截止日期.md
+      - 讲义与笔记索引: CEG5104-讲义与笔记索引.md
+      - Week 01:
+          - 蜂窝网络概述与演进: CEG5104-Week01-蜂窝网络概述与演进.md
+          - 网络规划流程与链路预算: CEG5104-Week01-网络规划流程与链路预算.md
+          - 覆盖与传播模型: CEG5104-Week01-覆盖与传播模型.md
+          - 容量初步与参数规划优化: CEG5104-Week01-容量初步与参数规划优化.md
+      - Week 02:
+          - 多址接入与容量: CEG5104-Week02-多址接入与容量.md
+          - 话务建模与话务强度: CEG5104-Week02-话务建模与话务强度.md
+          - 排队论基础与Erlang: CEG5104-Week02-排队论基础与Erlang.md
+          - 业界呼损模型与例题: CEG5104-Week02-业界呼损模型与例题.md
+      - Week 03:
+          - 空间复用与SIR分析: CEG5104-Week03-空间复用与SIR分析.md
+          - 六边形布局与扇区化: CEG5104-Week03-六边形布局与扇区化.md
+          - 频谱效率与信道分配: CEG5104-Week03-频谱效率与信道分配.md
+          - 例题与小结: CEG5104-Week03-例题与小结.md
+      - 当前进度与待补内容: CEG5104-当前进度与待补内容.md
   - CEG5201:
       - 课程总览: CEG5201-课程总览.md
       - 课程资源:
@@ -75,6 +98,31 @@ nav:
           - Blocking 与 CLOS: CEG5201-Week03-Blocking与CLOS.md
           - R/C 粒度比与性能模型: CEG5201-Week03-RC粒度比与性能模型.md
       - 当前进度与待补内容: CEG5201-当前进度与待补内容.md
+  - CEG5301:
+      - 课程总览: CEG5301-课程总览.md
+      - 课程资源:
+          - 资源总览: CEG5301-课程资源总览.md
+          - 课件与讲义: CEG5301-课件与讲义.md
+      - 课程要求与截止日期: CEG5301-课程要求与截止日期.md
+      - 讲义与笔记索引: CEG5301-讲义与笔记索引.md
+      - Week 01:
+          - 为什么需要神经网络: CEG5301-Week01-为什么需要神经网络.md
+          - 生物神经元与数学模型: CEG5301-Week01-生物神经元与数学模型.md
+          - 激活函数与网络结构: CEG5301-Week01-激活函数与网络结构.md
+      - Week 02:
+          - 感知机模型与决策边界: CEG5301-Week02-感知机模型与决策边界.md
+          - 感知机学习算法与收敛: CEG5301-Week02-感知机学习算法与收敛.md
+          - 从分类到回归与LMS: CEG5301-Week02-从分类到回归与LMS.md
+      - Week 03:
+          - 从感知机到MLP与XOR: CEG5301-Week03-从感知机到MLP与XOR.md
+          - 反向传播算法: CEG5301-Week03-反向传播算法.md
+          - MLP能力与局限: CEG5301-Week03-MLP能力与局限.md
+      - Week 04:
+          - 训练模式与输入归一化: CEG5301-Week04-训练模式与输入归一化.md
+          - 隐层设计与选择: CEG5301-Week04-隐层设计与选择.md
+          - 泛化过拟合与正则化: CEG5301-Week04-泛化过拟合与正则化.md
+          - 自组织映射SOM: CEG5301-Week04-自组织映射SOM.md
+      - 当前进度与待补内容: CEG5301-当前进度与待补内容.md
   - CEG5302:
       - 课程总览: CEG5302-课程总览.md
       - 课程资源:
@@ -104,4 +152,8 @@ nav:
           - Survivor Selection 与选择压力: CEG5302-Lecture04-SurvivorSelection与选择压力.md
           - 多样性维持与 Niching: CEG5302-Lecture04-多样性维持与Niching.md
           - Island 与 Cellular EA 及 MATLAB: CEG5302-Lecture04-Island与CellularEA及MATLAB.md
+      - Lecture 05:
+          - 约束处理概览与分类: CEG5302-Lecture05-约束处理概览与分类.md
+          - 罚函数原理: CEG5302-Lecture05-罚函数原理.md
+          - 罚函数类型与要点: CEG5302-Lecture05-罚函数类型与要点.md
       - 当前进度与待补内容: CEG5302-当前进度与待补内容.md
