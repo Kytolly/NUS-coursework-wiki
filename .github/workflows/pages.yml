@@ -3,6 +3,11 @@ name: Deploy Wiki to GitHub Pages
 # Builds the MkDocs site from the canonical Markdown in page/ and publishes it to
 # GitHub Pages. The generated tree (build/) is never committed: script/build.py
 # projects page/ into build/preview/docs, then MkDocs renders build/preview/site.
+#
+# Pages is already enabled for this repository with build_type=workflow, so the
+# workflow only needs to read Pages metadata and deploy the artifact. Enabling
+# Pages from a workflow requires a token other than GITHUB_TOKEN, so it is done
+# once out-of-band (Settings -> Pages -> Source: GitHub Actions) instead.
 
 on:
   push:
@@ -24,10 +29,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -39,9 +44,7 @@ jobs:
           pip install -r script/requirements.txt
 
       - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
+        uses: actions/configure-pages@v6
 
       - name: Project page/ into the MkDocs docs tree
         run: python script/build.py
@@ -49,11 +52,8 @@ jobs:
       - name: Build the site
         run: mkdocs build -f script/mkdocs.yml
 
-      - name: Disable Jekyll processing
-        run: touch build/preview/site/.nojekyll
-
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: build/preview/site
 
@@ -66,4 +66,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
