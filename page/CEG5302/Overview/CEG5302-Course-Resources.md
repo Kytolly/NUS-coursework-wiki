@@ -1,0 +1,42 @@
+# CEG5302 课程资源总览
+
+> 本页属于：CEG5302 / 资源
+>
+> 前置知识：[[CEG5302-Course-Overview]]
+>
+> 预计阅读时间：4 分钟
+
+## 资源清单
+
+| 资源 | 位置 | 用途 |
+|---|---|---|
+| 老师课件（PDF） | [CEG5302 Assets Release](https://github.com/Kytolly/NUS-coursework-wiki/releases/tag/CEG5302) | 正式知识来源，按 lecture 拆分 |
+| 个人笔记 | [CEG5302 Assets Release](https://github.com/Kytolly/NUS-coursework-wiki/releases/tag/CEG5302) | 辅助核对，不作为主来源 |
+| 课程要求 | [list.md](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/list.md) | 行政、考核、时间安排 |
+| 笔记索引 | [README.md](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5302/README.md) | 中文/英文笔记的概念索引 |
+
+## 各子页入口
+
+- [[CEG5302-Course-Materials]]：逐讲列出课件 PDF 与其关联知识页。
+- [[CEG5302-Course-Requirements]]：权重、时间线、提交物与 Open Questions。
+- [[CEG5302-Lecture-Index]]：Lecture 01–04 知识页索引与阅读顺序。
+
+## 引用约定
+
+正文引用课件时写出 PDF 文件与 slide 范围；当使用老师原图时保存必要局部图并写 caption、来源文件与页码，否则用 Mermaid 自制图解。个人笔记中的额外解释只有在能被课件支持时才纳入正文。
+
+## 来源
+
+- 课件目录：[CEG5302 Assets Release](https://github.com/Kytolly/NUS-coursework-wiki/releases/tag/CEG5302)（PDF 原件，本机核对）。
+- 个人笔记：[CEG5302 Assets Release](https://github.com/Kytolly/NUS-coursework-wiki/releases/tag/CEG5302)。
+- 核对日期：2026-09-03。
+
+## 下一步
+
+- 上一页：[[CEG5302-Course-Overview]]
+- 下一页：[[CEG5302-Course-Materials]]
+- 返回：[[Home]]
+
+## 更新日志
+
+- 2026-09-03：建立 CEG5302 资源入口。

@@ -27,23 +27,29 @@
 | MS 天线增益 | 约 0 dBi | 手机天线增益低 |
 | BTS 天线增益 | 8–21 dBi | 基站天线增益高 |
 
-**Worked Example 1 功率预算**：取 MS 发射功率 32 dBm、天线 0 dBi、电缆 0 dB；BTS 发射功率 42 dBm、天线 18 dBi、电缆 2 dB、合路器 2 dB、BTS 灵敏度 −108 dBm、MS 灵敏度 −106 dBm。（来源：1_network_planning.pdf 第 40 页。）
+**Worked Example 1 功率预算**：取 MS 发射功率 $32\text{ dBm}$、天线 $0\text{ dBi}$、电缆 $0\text{ dB}$；BTS 发射功率 $42\text{ dBm}$、天线 $18\text{ dBi}$、电缆 $2\text{ dB}$、合路器 $2\text{ dB}$、BTS 灵敏度 $-108\text{ dBm}$、MS 灵敏度 $-106\text{ dBm}$。（来源：1_network_planning.pdf 第 40 页。）
 
 上行允许路径损耗：
-```text
-EIRPm = Ptm − (Lcm + Lom) + Gm = 32 − (0+0) + 0 = 32 dBm
-Prb   = −Gb + (Lcb + Lob) + Bs = −18 + (2+0) + (−108) = −124 dBm
-PLu   = EIRPm − Prb = 32 − (−124) = 156 dB
-```
+
+$$
+\begin{aligned}
+\text{EIRP}_m &= P_{tm} - (L_{cm} + L_{om}) + G_m = 32 - (0+0) + 0 = 32\text{ dBm} \\
+P_{rb}   &= -G_b + (L_{cb} + L_{ob}) + B_s = -18 + (2+0) + (-108) = -124\text{ dBm} \\
+PL_u   &= \text{EIRP}_m - P_{rb} = 32 - (-124) = 156\text{ dB}
+\end{aligned}
+$$
 
 下行：
-```text
-EIRPb = Ptb + Gtb − (Lcb + Lccb) = 42 + 18 − (2+2) = 56 dBm
-Prm   = Ms + (Lcm + Lom) − Gm = −106 + (0+0) − 0 = −106 dBm
-PLd   = EIRPb − Prm = 56 − (−106) = 162 dB
-```
 
-**含义**：上行 156 dB < 下行 162 dB，说明**上行是瓶颈**：手机功率小、天线增益低，基站能覆盖的范围比手机能“打回去”的范围更大，因此下行覆盖更好。想缩小差距可以降低下行功率，但会损失覆盖；更推荐在 BTS 引入**分集（diversity）**或**低噪声放大器（LNA）**来提升上行接收能力。（来源：1_network_planning.pdf 第 41–43 页。）
+$$
+\begin{aligned}
+\text{EIRP}_b &= P_{tb} + G_{tb} - (L_{cb} + L_{ccb}) = 42 + 18 - (2+2) = 56\text{ dBm} \\
+P_{rm}   &= M_s + (L_{cm} + L_{om}) - G_m = -106 + (0+0) - 0 = -106\text{ dBm} \\
+PL_d   &= \text{EIRP}_b - P_{rm} = 56 - (-106) = 162\text{ dB}
+\end{aligned}
+$$
+
+**含义**：上行 $156\text{ dB} < \text{下行 } 162\text{ dB}$，说明**上行是瓶颈**：手机功率小、天线增益低，基站能覆盖的范围比手机能“打回去”的范围更大，因此下行覆盖更好。想缩小差距可以降低下行功率，但会损失覆盖；更推荐在 BTS 引入**分集（diversity）**或**低噪声放大器（LNA）**来提升上行接收能力。（来源：1_network_planning.pdf 第 41–43 页。）
 
 ## 下一步
 

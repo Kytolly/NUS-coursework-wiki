@@ -84,13 +84,162 @@ if (typeof document$ !== "undefined") {
 }
 """
 
+MATHJAX_JS = """
+window.MathJax = {
+  tex: {
+    inlineMath: [["\\\\(", "\\\\)"]],
+    displayMath: [["\\\\[", "\\\\]"]],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    ignoreHtmlClass: ".*|",
+    processHtmlClass: "arithmatex"
+  }
+};
+
+document$.subscribe(() => {
+  if (typeof MathJax !== "undefined") {
+    if (MathJax.startup && MathJax.startup.output) {
+      MathJax.startup.output.clearCache();
+    }
+    if (MathJax.typesetClear) {
+      MathJax.typesetClear();
+    }
+    if (MathJax.texReset) {
+      MathJax.texReset();
+    }
+    if (MathJax.typesetPromise) {
+      MathJax.typesetPromise();
+    }
+  }
+});
+"""
+
+
+RENAME_MAP = {
+    # Overview
+    "CEG5302-课程总览": "CEG5302-Course-Overview",
+    "CEG5302-课件与讲义": "CEG5302-Course-Materials",
+    "CEG5302-课程要求与截止日期": "CEG5302-Course-Requirements",
+    "CEG5302-课程资源总览": "CEG5302-Course-Resources",
+    "CEG5302-讲义与笔记索引": "CEG5302-Lecture-Index",
+    "CEG5302-当前进度与待补内容": "CEG5302-Course-Progress",
+    # Lecture 01
+    "CEG5302-Lecture01-进化计算导论": "CEG5302-Lecture01-Introduction-to-EC",
+    "CEG5302-Lecture01-自然进化隐喻与基本循环": "CEG5302-Lecture01-Evolution-Metaphor-and-Basic-Cycle",
+    "CEG5302-Lecture01-四类问题与工程应用": "CEG5302-Lecture01-Problem-Types-and-Applications",
+    # Lecture 02
+    "CEG5302-Lecture02-问题类型与单目标优化": "CEG5302-Lecture02-Problem-Types-and-Single-Objective",
+    "CEG5302-Lecture02-计算复杂度与进化计算动机": "CEG5302-Lecture02-Computational-Complexity-and-EC-Motivation",
+    "CEG5302-Lecture02-EA七大组件": "CEG5302-Lecture02-EA-Seven-Components",
+    "CEG5302-Lecture02-CanonicalGA与手算示例": "CEG5302-Lecture02-Canonical-GA-Worked-Example",
+    # Lecture 03
+    "CEG5302-Lecture03-表示的概念与选择准则": "CEG5302-Lecture03-Representation-Concepts-and-Criteria",
+    "CEG5302-Lecture03-Binary与Integer表示": "CEG5302-Lecture03-Binary-and-Integer-Representation",
+    "CEG5302-Lecture03-Real表示的变异": "CEG5302-Lecture03-Real-Valued-Mutation",
+    "CEG5302-Lecture03-Real表示的重组": "CEG5302-Lecture03-Real-Valued-Recombination",
+    "CEG5302-Lecture03-Permutation表示": "CEG5302-Lecture03-Permutation-Representation",
+    "CEG5302-Lecture03-Tree表示与Crossover一般结论": "CEG5302-Lecture03-Tree-Representation-and-Crossover-Conclusions",
+    # Lecture 04
+    "CEG5302-Lecture04-种群管理模型与FPS及Ranking": "CEG5302-Lecture04-Population-Models-FPS-and-Ranking",
+    "CEG5302-Lecture04-RWS与Tournament等选择": "CEG5302-Lecture04-RWS-Tournament-and-Selection-Schemes",
+    "CEG5302-Lecture04-SurvivorSelection与选择压力": "CEG5302-Lecture04-Survivor-Selection-and-Selection-Pressure",
+    "CEG5302-Lecture04-多样性维持与Niching": "CEG5302-Lecture04-Diversity-Maintenance-and-Niching",
+    "CEG5302-Lecture04-Island与CellularEA及MATLAB": "CEG5302-Lecture04-Island-Cellular-EA-and-MATLAB",
+    # Lecture 05
+    "CEG5302-Lecture05-约束处理概览与分类": "CEG5302-Lecture05-Constraint-Handling-Overview",
+    "CEG5302-Lecture05-罚函数原理": "CEG5302-Lecture05-Penalty-Functions-Principles",
+    "CEG5302-Lecture05-罚函数类型与要点": "CEG5302-Lecture05-Penalty-Function-Types-and-Key-Points",
+}
+
 
 def target_name(name: str) -> str:
+    name = RENAME_MAP.get(name, name)
     return "index.md" if name == "Home" else f"{name}.md"
 
 
+def normalize_math(text: str) -> str:
+    lines = text.split("\n")
+    new_lines = []
+    i = 0
+    in_code = False
+    while i < len(lines):
+        line = lines[i]
+        if line.strip().startswith("```"):
+            in_code = not in_code
+            new_lines.append(line)
+            i += 1
+            continue
+        if in_code:
+            new_lines.append(line)
+            i += 1
+            continue
+
+        single_dollar = re.match(r"^(\s*)\$\$(.+?)\$\$\s*$", line)
+        if single_dollar:
+            indent = single_dollar.group(1)
+            math_content = single_dollar.group(2).strip()
+            if indent or (new_lines and new_lines[-1].strip().startswith(("-", "*", "1.", "2.", "3.", "4.", "5."))):
+                new_lines.append(f"{indent}${math_content}$")
+                i += 1
+                continue
+            else:
+                if new_lines and new_lines[-1].strip() != "":
+                    new_lines.append("")
+                new_lines.append("$$")
+                new_lines.append(math_content)
+                new_lines.append("$$")
+                if i + 1 < len(lines) and lines[i+1].strip() != "":
+                    new_lines.append("")
+                i += 1
+                continue
+
+        if line.strip() == "$$":
+            if new_lines and new_lines[-1].strip() != "":
+                if new_lines[-1].strip().startswith("- "):
+                    bullet_text = new_lines[-1].strip()[2:]
+                    colon = "：" if "：" in bullet_text else ":"
+                    b_clean = bullet_text.rstrip("：:")
+                    new_lines[-1] = f"**{b_clean}**{colon}"
+                new_lines.append("")
+            new_lines.append("$$")
+            i += 1
+            while i < len(lines):
+                cur = lines[i]
+                if cur.strip() == "$$":
+                    new_lines.append("$$")
+                    if i + 1 < len(lines) and lines[i+1].strip() != "":
+                        new_lines.append("")
+                    i += 1
+                    break
+                else:
+                    if cur.strip() != "":
+                        new_lines.append(cur)
+                    i += 1
+            continue
+
+        new_lines.append(line)
+        i += 1
+
+    return "\n".join(new_lines)
+
+
 def convert(text: str) -> str:
-    return re.sub(r"\[\[([^\]]+)\]\]", lambda m: f"[{m.group(1).strip()}]({target_name(m.group(1).strip())})", text)
+    text = normalize_math(text)
+    text = re.sub(r'\((?:\.\./)+assets/', '(assets/', text)
+    def repl(m):
+        raw = m.group(1).strip()
+        if "|" in raw:
+            target, label = raw.split("|", 1)
+            target = target.strip()
+            label = label.strip()
+        else:
+            target = raw
+            label = raw
+        resolved = RENAME_MAP.get(target, target)
+        return f"[{label}]({target_name(resolved)})"
+    return re.sub(r"\[\[([^\]]+)\]\]", repl, text)
 
 
 def main() -> None:
@@ -118,6 +267,10 @@ def main() -> None:
     js.parent.mkdir(parents=True, exist_ok=True)
     js.write_text(MERMAID_JS, encoding="utf-8")
     print("built javascripts/mermaid.js")
+    math_js = DOCS / "javascripts" / "mathjax.js"
+    math_js.parent.mkdir(parents=True, exist_ok=True)
+    math_js.write_text(MATHJAX_JS, encoding="utf-8")
+    print("built javascripts/mathjax.js")
     vendor_js = DOCS / "javascripts" / "vendor" / MERMAID_VENDOR.name
     vendor_js.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(MERMAID_VENDOR, vendor_js)

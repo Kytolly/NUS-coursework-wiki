@@ -20,13 +20,15 @@
 
 **GSM 的多址**是细胞式 **FDM-TDMA**：FDM 作双工（duplexing）机制，TDMA 作复用（multiplexing）机制。系统带宽被划分为多个互不重叠的 FDM 频道；每个频道再把时间切成时隙，每个时隙分给不同用户。（来源：2_capacity_analysis.pdf 第 10–11 页。）
 
-**GSM 容量示例**：可用带宽 5 MHz，保护带占 1 个频道，频道间隔 200 kHz，TDMA 每帧 8 时隙：
+**GSM 容量示例**：可用带宽 $5\text{ MHz}$，保护带占 1 个频道，频道间隔 $200\text{ kHz}$，TDMA 每帧 8 时隙：
 
-```
-FDM 频道数 = 5 MHz / 200 kHz = 25
-扣除 1 个保护频道 → 24 个频道
-可承载呼叫数 = 24 × 8 时隙 = 192 路
-```
+$$
+\begin{aligned}
+\text{FDM 频道数} &= \frac{5\text{ MHz}}{200\text{ kHz}} = 25 \\
+\text{扣除 1 个保护频道} &\to 24\text{ 个频道} \\
+\text{可承载呼叫数} &= 24 \times 8\text{ 时隙} = 192\text{ 路}
+\end{aligned}
+$$
 
 （来源：2_capacity_analysis.pdf 第 12 页。）注：这里的“192 路”是**同时可服务的信道数**，不是 Erlang 容量；要换算成话务承载还需 Week 2 后段的呼损模型（Erlang-B）。
 

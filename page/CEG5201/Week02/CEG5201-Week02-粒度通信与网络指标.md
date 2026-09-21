@@ -18,28 +18,30 @@
 
 ## 通信规模
 
-通信延迟除链路延迟外，还由通信模式决定（第 27 页）。若 `n` 个任务两两通信，潜在交互数最多为：
+通信延迟除链路延迟外，还由通信模式决定（第 27 页）。若 $n$ 个任务两两通信，潜在交互数最多为：
 
-`n(n−1)/2`
+$$
+\frac{n(n-1)}{2}
+$$
 
 因此通信成本可呈二次增长，给可用处理器数量设定上限。广播（broadcasting）与多播（multicasting）可减少重复发送，但收益取决拓扑与通信模式。
 
 ## 网络基本指标
 
-对互连图 `G=(V,E)`（第 30–33 页）：
+对互连图 $G=(V,E)$（第 30–33 页）：
 
-- **distance(u,v)**：最短路径长度；
-- **diameter d**：所有节点对距离的最大值 `d = max Distance(u,v)`，衡量最坏通信延迟；
-- **degree deg(u)**：节点 incident 的链路数；若所有节点度数均为 `δ`，称为 `δ`-regular；
-- **节点不连通度（node-connectivity K）**：使网络断开的最少节点删除数，是容错度量；
-- **f-fault diameter**：删除至多 `f` 个节点后的最坏直径。
+- **$\text{distance}(u,v)$**：最短路径长度；
+- **diameter $d$**：所有节点对距离的最大值 $d = \max \text{Distance}(u,v)$，衡量最坏通信延迟；
+- **degree $\text{deg}(u)$**：节点 incident 的链路数；若所有节点度数均为 $\delta$，称为 $\delta$-regular；
+- **节点不连通度（node-connectivity $K$）**：使网络断开的最少节点删除数，是容错度量；
+- **$f$-fault diameter**：删除至多 $f$ 个节点后的最坏直径。
 
-对 `δ`-regular 网络，成本常记作 `C = d·δ`，而 packing density = 节点数/成本，packing density 越高，所需 VLSI 芯片面积越小（第 32 页）。可对 mesh、hypercube、ring 等标准图核算上述指标（第 33 页）。
+对 $\delta$-regular 网络，成本常记作 $C = d \cdot \delta$，而 $\text{packing density} = \text{节点数}/\text{成本}$，packing density 越高，所需 VLSI 芯片面积越小（第 32 页）。可对 mesh、hypercube、ring 等标准图核算上述指标（第 33 页）。
 
 ## 其他术语与静态/动态网络
 
 - **延迟（latency）**：机器子系统间通信开销的时间度量，如内存延迟、同步延迟（第 23 页）；通信延迟由链路延迟与通信模式共同决定。
-- **node-disjoint 路径**：两条路径除端点 `u`、`v` 外无其他公共节点，是多路径路由与容错设计的基础（第 31 页）。
+- **node-disjoint 路径**：两条路径除端点 $u$、$v$ 外无其他公共节点，是多路径路由与容错设计的基础（第 31 页）。
 - 网络可分**静态**（点对点、mesh、hypercube、ring、tree、star 等，链路固定）与**动态**（总线、crossbar 等，物理/逻辑链路随连接变化）两大类（第 29–30 页）。
 
 静态规则图可核算 diameter、degree、node-connectivity 等指标，便于做折中；动态网络则需要考虑切换/仲裁与阻塞。粒度和网络选择要一起权衡：粗粒度任务通信少，更适合低开销的静态拓扑；细粒度任务同步频繁，在动态网络下要更小心调度与仲裁。

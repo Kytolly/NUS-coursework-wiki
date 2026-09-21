@@ -6,26 +6,28 @@
 
 ## 频谱效率的关键量
 
-W 为总频谱，C 为信道（载波），s 为每信道时隙数，K 为每小区扇区数，N_reuse 为簇大小。C 个载波分成 N_reuse 个簇，每簇再按扇区分成 K 组（理想化：无移动、无切换）。（来源：3_frequency_allocation.pdf 第 36 页。）于是：
+$W$ 为总频谱，$C$ 为信道（载波），$s$ 为每信道时隙数，$K$ 为每小区扇区数，$N_{\text{reuse}}$ 为簇大小。$C$ 个载波分成 $N_{\text{reuse}}$ 个簇，每簇再按扇区分成 $K$ 组（理想化：无移动、无切换）。（来源：3_frequency_allocation.pdf 第 36 页。）于是：
 
-- 每扇区服务器数 = s·C / (N_reuse·K)。
-- g_ε(n) 表示目标呼损 ε、n 个服务器时**每个服务器可承载的业务量**（Erlang-B 每服务器负载）。每小区负载 = g_ε(·)·[s·C/(N_reuse·K)]·K；系统容量 Λ = (A/a)·g_ε(·)·s·C/N_reuse。（来源：3_frequency_allocation.pdf 第 37–38 页。）
+- 每扇区服务器数 $= \frac{sC}{N_{\text{reuse}} K}$。
+- $g_\varepsilon(n)$ 表示目标呼损 $\varepsilon$、$n$ 个服务器时**每个服务器可承载的业务量**（Erlang-B 每服务器负载）。每小区负载 $= g_\varepsilon(\cdot) \cdot \left[\frac{sC}{N_{\text{reuse}} K}\right] \cdot K$；系统容量 $\Lambda = \left(\frac{A}{a}\right) \cdot g_\varepsilon(\cdot) \cdot \frac{sC}{N_{\text{reuse}}}$。（来源：3_frequency_allocation.pdf 第 37–38 页。）
 
 ## 频谱效率定义
 
-```text
-ν = Λ / (A·W)
-  = (1/a)·(s·C/W)·g_ε( s·C/W · W/(N_reuse·K) ) · (1/N_reuse)
-```
+$$
+\begin{aligned}
+\nu &= \frac{\Lambda}{A W} \\
+    &= \left(\frac{1}{a}\right) \left(\frac{sC}{W}\right) g_\varepsilon\left( \frac{sC}{W} \cdot \frac{W}{N_{\text{reuse}} K} \right) \left(\frac{1}{N_{\text{reuse}}}\right)
+\end{aligned}
+$$
 
-- s·C/W 由可用频谱固定，不可变。
-- g_ε(·)·(1/N_reuse) 随 N_reuse 与 K 增大而下降——簇越大/扇区越多，每组信道越少，中继效率越低。
-- N_reuse 与 K 同时决定 SIR，所以效率与干扰要折中。
-- 减小单小区面积 a 可提高 ν（更小蜂窝→更高容量）；代价是切换增多、信令负载上升、需更多基站。（来源：3_frequency_allocation.pdf 第 39–40 页。）
+- $sC/W$ 由可用频谱固定，不可变。
+- $g_\varepsilon(\cdot) \cdot (1/N_{\text{reuse}})$ 随 $N_{\text{reuse}}$ 与 $K$ 增大而下降——簇越大/扇区越多，每组信道越少，中继效率越低。
+- $N_{\text{reuse}}$ 与 $K$ 同时决定 SIR，所以效率与干扰要折中。
+- 减小单小区面积 $a$ 可提高 $\nu$（更小蜂窝→更高容量）；代价是切换增多、信令负载上升、需更多基站。（来源：3_frequency_allocation.pdf 第 39–40 页。）
 
 ## 小区分裂
 
-重流量小区可分裂成更小的小区，增加信道复用。**4:1 分裂**：新小区位于两小区边界，半径为旧 1/2、面积为 1/4；**3:1 分裂**：位于三小区角落，半径为旧 1/√3、面积为 1/3。按复用因子选法：N=3→4:1，N=4→3:1，N=7→3:1 或 4:1，N=9→4:1。（来源：3_frequency_allocation.pdf 第 41–46 页。）
+重流量小区可分裂成更小的小区，增加信道复用。**4:1 分裂**：新小区位于两小区边界，半径为旧 $1/2$、面积为 $1/4$；**3:1 分裂**：位于三小区角落，半径为旧 $1/\sqrt{3}$、面积为 $1/3$。按复用因子选法：$N=3 \to 4:1$，$N=4 \to 3:1$，$N=7 \to 3:1\text{ 或 } 4:1$，$N=9 \to 4:1$。（来源：3_frequency_allocation.pdf 第 41–46 页。）
 
 ```mermaid
 flowchart TD
@@ -47,7 +49,7 @@ flowchart TD
 
 问题：把频谱切成互不相交信道，可同时使用且最小化邻道干扰。
 
-- **FCA（固定）**：每小区固定一组信道，满则阻塞；最小信道组数 N = D/(√3·R)。短期波动下 QoS 差，可向邻区借信道（SB/SBR/BA/BAR/BFA）。（来源：3_frequency_allocation.pdf 第 49–54 页。）
+- **FCA（固定）**：每小区固定一组信道，满则阻塞；最小信道组数 $N = \frac{D}{\sqrt{3} R}$。短期波动下 QoS 差，可向邻区借信道（SB/SBR/BA/BAR/BFA）。（来源：3_frequency_allocation.pdf 第 49–54 页。）
 - **DCA（动态）**：信道放中央池、按需分配，选干扰最小者；分集中与分布式。集中式理论最优但开销大、延迟高、不实用；代表 FA/LODA/RING/MSQ/1-clique。（来源：3_frequency_allocation.pdf 第 55–62 页。）
 - **对比**：FCA 重负载较好、最大复用、适大蜂窝；DCA 轻重负载好、灵活、无频率规划、适微蜂窝。（来源：3_frequency_allocation.pdf 第 63–64 页。）
 

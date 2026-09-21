@@ -8,17 +8,21 @@
 
 讲义把 CPU 时间写为（[CG5201_Chap1 (2627).pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5201/CG5201_Chap1%20%282627%29.pdf) 第 38–41 页）：
 
-`T = Ic × CPI × τ = Ic × CPI / f`
+$$
+T = I_c \times \text{CPI} \times \tau = \frac{I_c \times \text{CPI}}{f}
+$$
 
-其中 `Ic` 是指令数，`CPI` 是平均每指令周期数，`τ` 是周期时间，`f` 是时钟频率。用 `C` 表示总周期数，则 `CPI = C/Ic`。MIPS 率为：
+其中 $I_c$ 是指令数，$\text{CPI}$ 是平均每指令周期数，$\tau$ 是周期时间，$f$ 是时钟频率。用 $C$ 表示总周期数，则 $\text{CPI} = C/I_c$。MIPS 率为：
 
-`MIPS = Ic / (T·10^6) = f / (CPI·10^6)`
+$$
+\text{MIPS} = \frac{I_c}{T \times 10^6} = \frac{f}{\text{CPI} \times 10^6}
+$$
 
-因此 MIPS 与时钟频率成正比、与 CPI 成反比（第 41–42 页）。`T = Ic·10^6/MIPS`。只看提高频率并不一定能改善系统整体吞吐率，因为指令数、CPI、I/O、OS 和调度开销都会影响完成时间。
+因此 MIPS 与时钟频率成正比、与 CPI 成反比（第 41–42 页）。$T = \frac{I_c \times 10^6}{\text{MIPS}}$。只看提高频率并不一定能改善系统整体吞吐率，因为指令数、CPI、I/O、OS 和调度开销都会影响完成时间。
 
 ## 吞吐率与并发/并行
 
-CPU 吞吐率 `Wp = 1/T = f/(Ic·CPI)`，系统吞吐率 `Ws` 还要扣除多程序环境下的 I/O、OS 与调度开销，故 `Ws < Wp`，理想情况下 `Ws = Wp`（第 43 页）。移动平台还常看 MIPS/mW，且多数手机被降频以省电（第 44 页）。
+CPU 吞吐率 $W_p = \frac{1}{T} = \frac{f}{I_c \times \text{CPI}}$，系统吞吐率 $W_s$ 还要扣除多程序环境下的 I/O、OS 与调度开销，故 $W_s < W_p$，理想情况下 $W_s = W_p$（第 43 页）。移动平台还常看 MIPS/mW，且多数手机被降频以省电（第 44 页）。
 
 - **并发（concurrency）**：一个应用同时管理多个任务。
 - **并行（parallelism）**：把一个任务拆成可同时执行的子任务。
@@ -29,17 +33,19 @@ CPU 吞吐率 `Wp = 1/T = f/(Ic·CPI)`，系统吞吐率 `Ws` 还要扣除多程
 
 向量机可分 register-to-register（如 CRAY）与 memory-to-memory（如 Cyber 205）两类；SIMD 由控制单元向一组 PE 广播指令，并用 mask 与数据路由函数控制参与单元（第 62–63 页）。
 
-**PRAM** 是 Fortune 与 Wyllie（1978）提出的理想化共享内存模型，忽略实现细节，用于并行算法设计、复杂度上界与 VLSI 估计（第 64、69 页）。共享内存读写组合出四种模型：EREW、CREW、ERCW、CRCW；CRCW 的写冲突可用 common/arbitrary/minimum/priority 策略解决（第 70 页）。CRCW 一般比 EREW 更强，但定理给出：同一问题用 p 个处理器，CRCW 相对最佳 EREW 最多快 `O(log p)`（第 74 页）。
+**PRAM** 是 Fortune 与 Wyllie（1978）提出的理想化共享内存模型，忽略实现细节，用于并行算法设计、复杂度上界与 VLSI 估计（第 64、69 页）。共享内存读写组合出四种模型：EREW、CREW、ERCW、CRCW；CRCW 的写冲突可用 common/arbitrary/minimum/priority 策略解决（第 70 页）。CRCW 一般比 EREW 更强，但定理给出：同一问题用 $p$ 个处理器，CRCW 相对最佳 EREW 最多快 $O(\log p)$（第 74 页）。
 
 ![PRAM 理论模型架构（处理器共享同一内存）](assets/CEG5201/fig-002-pram.png)
 
 图 1：PRAM 理论模型架构（处理器经共享内存通信）；来源：[CG5201_Chap1 (2627).pdf](https://github.com/Kytolly/NUS-coursework-wiki/releases/download/CEG5201/CG5201_Chap1%20%282627%29.pdf) 第 69 页；核对 2026-09-07。
 
-若串行占比为 `F`，用 `n` 个处理器时（第 75 页）：
+若串行占比为 $F$，用 $n$ 个处理器时（第 75 页）：
 
-`S(n,F) = 1/[F + (1−F)/n]`
+$$
+S(n,F) = \frac{1}{F + \frac{1-F}{n}}
+$$
 
-当 `n → ∞` 时，加速上限仍为 `1/F`。串行部分像一条只能由一个人办理的柜台，限制再增加多少并行工作人员都无济于事。
+当 $n \to \infty$ 时，加速上限仍为 $1/F$。串行部分像一条只能由一个人办理的柜台，限制再增加多少并行工作人员都无济于事。
 
 ## 共享内存可扩展性：UMA 与 NUMA
 

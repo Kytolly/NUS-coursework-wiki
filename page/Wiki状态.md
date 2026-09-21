@@ -1,96 +1,75 @@
 # Wiki 状态
 
-> 本页属于：首页 / 状态
-> 前置知识：[[Home]]
-> 预计阅读时间：5 分钟
+- 主题：NUS Computer Engineering coursework 记录与产出归档
+- 读者：本人复习、项目准备和提交前核对；必要时供协作者阅读
+- 组织方式：课程命名空间 → 资源 / 要求 / 周次·讲次知识页 / 产出
+- 当前课程：CEG5104（Week 04 课件全覆盖）、CEG5201（Week 04 课件全覆盖）、CEG5301（Week 04 Part I 全覆盖）、CEG5302（Lecture 05 全覆盖）
+- 当前覆盖：CEG5104 Week 01–04（含 NTN）；CEG5201 Week 01–04（含 Chap 3 与 Kai Hwang 习题）；CEG5301 Week 01–04（Part I 神经网络全覆盖）；CEG5302 Lecture 01–05（含 Quiz 题解与 Project 规范）
+- 正式来源优先级：最新 assessment brief/rubric/公告 → 老师讲义 → 教师/TA 答复 → 个人笔记
+- 发布方式：GitHub Wiki 扁平页面 + MkDocs 本地预览
 
-| 指标 | 当前值 |
-|---|---:|
-| 进行中的课程 | 4 |
-| 公开内容页 | 89 |
-| 已知内部死链 | 0 |
-| 最新课程进度 | CEG5104 Week 3；CEG5201 Week 04；CEG5301 Week 4（Part I）；CEG5302 Lecture 05 |
+## 页面清单
 
-## 当前覆盖
+- [x] Home.md
+- [x] Wiki状态
+- [x] CEG5104 课程总览
+- [x] CEG5104 课程资源与课件索引
+- [x] CEG5104 课程要求与截止日期
+- [x] CEG5104 讲义与笔记索引
+- [x] Week 01 讲义拆分页（4 个主题页）
+- [x] Week 02 讲义拆分页（4 个主题页）
+- [x] Week 03 讲义拆分页（4 个主题页）
+- [x] Week 04 讲义拆分页（4 个主题页：NTN 空间平台、轨道几何与容量、3GPP 标准化、产业与 D2D）
+- [x] CEG5104 当前进度与待补内容
+- [ ] CEG5104 Week 05 课件（等待后续发布）
+- [ ] CEG5104 CA1/CA2 细则与期末日期核实
+- [x] CEG5201 课程总览
+- [x] CEG5201 课程资源板块
+- [x] CEG5201 课程要求与截止日期
+- [x] CA1 Consultation 子 tab（6 个页面）
+- [x] Week 01 讲义拆分页（3 个主题页）
+- [x] Week 02 讲义拆分页（3 个主题页）
+- [x] Week 03 讲义拆分页（3 个主题页）
+- [x] Week 04 讲义拆分页（4 个主题页：处理器设计空间、CISC/RISC 控制单元、超标量架构、流水线冲突与向量计算）
+- [x] Practice 习题精解（Kai Hwang 体系结构教材题解）
+- [x] CEG5201 当前进度与待补内容
+- [ ] CEG5201 CA2 项目（等待正式 brief）
+- [x] CEG5301 课程总览
+- [x] CEG5301 课程资源与课件索引
+- [x] CEG5301 课程要求与截止日期
+- [x] CEG5301 讲义与笔记索引
+- [x] Week 01 讲义拆分页（3 个主题页）
+- [x] Week 02 讲义拆分页（3 个主题页）
+- [x] Week 03 讲义拆分页（3 个主题页）
+- [x] Week 04 讲义拆分页（4 个主题页：训练模式与归一化、隐层设计与SVD、泛化与正则化、SOM）
+- [x] CEG5301 当前进度与待补内容
+- [ ] CEG5301 Week 5–6（Part I 后续）及 Part II 强化学习课件（等待发布）
+- [x] CEG5302 课程总览
+- [x] CEG5302 课程资源与课件索引
+- [x] CEG5302 课程要求与截止日期
+- [x] CEG5302 讲义与笔记索引
+- [x] Lecture 01 讲义拆分页（3 个主题页）
+- [x] Lecture 02 讲义拆分页（4 个主题页）
+- [x] Lecture 03 讲义拆分页（6 个主题页）
+- [x] Lecture 04 讲义拆分页（5 个主题页）
+- [x] Lecture 05 讲义拆分页（3 个主题页）
+- [x] CEG5302 随堂测验工作区（4 个页面：Overview、Past Paper 20分推导题解、Topic Mapping、Study Status）
+- [x] CEG5302 小组项目工作区（7 个页面：Overview、Requirements、Part I、Part II、Implementation Log、Experiment Log、Checklist）
+- [x] CEG5302 当前进度与待补内容
+- [ ] CEG5302 Lecture 06 及以后正式课件（等待发布）
 
-| 板块 | 状态 | 覆盖范围 |
-|---|---|---|
-| 首页与全站导航 | 已建立 | 课程仪表盘、Wiki 状态、侧边栏 |
-| CEG5104 课程资源 | 已建立 | Week 01–03 课件、双语笔记、list.md |
-| CEG5104 课程要求 | 已建立 | CA1/CA2 权重、期末日期（待核实）、考试范围 |
-| CEG5104 Week 01 | 已拆页 | 4 个主题短页 |
-| CEG5104 Week 02 | 已拆页 | 4 个主题短页 |
-| CEG5104 Week 03 | 已拆页 | 4 个主题短页 |
-| CEG5104 Week 4 及以后 | 待补 | 取得正式课件后增量生成 |
-| CEG5201 课程资源 | 已建立 | Week 01–03 讲义、CA 文件、Canvas/工具入口 |
-| CEG5201 课程要求 | 已建立，持续核实 | CA1/CA2 时间线、权重和已知提交规则 |
-| CEG5201 CA1 Consultation | 页面已建立 | 要求、Topics Guide、提交物、问题与答复模板 |
-| CEG5201 Week 01–03 | 已拆页 | 每周 3 个主题短页 |
-| CEG5201 Week 04 及以后 | 待补 | 取得并核对正式讲义后增量生成 |
-| CEG5201 CA1/CA2 产出 | 待补 | 不提前推断项目题目和评分 |
-| CEG5301 课程资源 | 已建立 | Part I Week 01–04 课件、双语笔记索引 |
-| CEG5301 课程要求 | 已建立 | 考核构成（CA 50% / Final 50%）与开放问题 |
-| CEG5301 Week 01 | 已拆页 | 3 个主题短页 |
-| CEG5301 Week 02 | 已拆页 | 3 个主题短页 |
-| CEG5301 Week 03 | 已拆页 | 3 个主题短页 |
-| CEG5301 Week 04 | 已拆页 | 4 个主题短页 |
-| CEG5301 Week 5–6（Part I）及 Part II | 待补 | 取得正式课件后增量生成 |
-| CEG5302 课程资源 | 已建立 | Lecture 01–05 课件、project overview、quiz、笔记索引 |
-| CEG5302 课程要求 | 已建立 | 测试/编程作业/project 细则（NSGA-II 已明确） |
-| CEG5302 Lecture 01 | 已拆页 | 3 个主题短页 |
-| CEG5302 Lecture 02 | 已拆页 | 4 个主题短页（2a + 2b） |
-| CEG5302 Lecture 03 | 已拆页 | 6 个主题短页 |
-| CEG5302 Lecture 04 | 已拆页 | 5 个主题短页 |
-| CEG5302 Lecture 05 | 已拆页 | 3 个主题短页（约束处理） |
-| CEG5302 Lecture 06 及以后 | 待补 | 取得正式课件后增量生成 |
+## 课程来源
 
-## 内容健康度
+- CEG5104 课程材料目录：（Week 1–4 课件 PDF）
+- CEG5201 课程材料目录：（Chap 1–3 课件及 Kai Hwang 习题）
+- CEG5301 课程材料目录：（Week 1–4 课件 PDF）
+- CEG5302 课程材料目录：（Lecture 1–5、project overview、quiz）
 
-```mermaid
-flowchart TD
-    A[正式材料] --> B{是否已核实?}
-    B -- 是 --> C[进入资源/要求/知识页]
-    B -- 否 --> D[保留为 Open Question]
-    C --> E[更新导航与状态]
-    E --> F[构建与死链检查]
-```
+## Changelog
 
-图 1：Wiki 增量更新检查流程（自制；2026-09-01）。
-
-> [!TIP]
-> **当前构建状态：**本地 MkDocs 严格构建通过；内部 Wiki 链接检查未发现死链。Mermaid 11.17.2 已固定在仓库构建依赖中，可离线渲染为 SVG。
-
-> [!NOTE]
-> **GitHub Wiki 的图表限制：**本地 MkDocs 会渲染 Mermaid。GitHub Wiki 原生页面可能把 Mermaid fenced block 显示为代码；需要远端一致显示时，应将关键图导出为 PNG/SVG 并作为附件发布。
-
-## 来源与维护边界
-
-- `_META.md` 是维护者使用的详细状态账本；本页是面向阅读者的状态摘要。
-- 正式来源优先级：assessment brief/rubric/公告 → 老师讲义 → 教师/TA 答复 → 个人笔记。
-- CEG5104、CEG5201、CEG5301 与 CEG5302 原始课程文件以各自的 GitHub Release 资产提供；Wiki 默认只保存 Markdown 和经过选择的公开附件。
-- 每次增加页面时同步更新 Home、`_Sidebar.md`、`_META.md` 和本页。
-
-## 近期维护队列
-
-1. 根据实际 CA1 consultation 填写 CEG5201 教师答复、最终选题和行动项。
-2. 获取 CEG5201 Week 04 正式讲义后按主题拆页。
-3. 复核 CEG5302 Lecture 1（扫描版课件）的 slide 编号引用。
-4. 取得 CEG5302 Lecture 06 及以后课件后增量拆页。
-5. 在 CEG5302 三次测试/编程作业细则公布后更新要求页。
-6. 取得 CEG5301 Week 5–6（Part I）与 Part II 强化学习课件后增量拆页。
-7. 在 CEG5301 作业/期末考试细则公布后更新要求页。
-8. 取得 CEG5104 Week 4 及以后（移动性/5G）课件后增量拆页；核实期末日期与 CA1/CA2 细则。
-
-## 下一步
-
-- 上一页：[[Home]]
-- 下一页：[[CEG5104-课程总览]]
-- 返回：[[Home]]
-
-## 更新日志
-
-- 2026-09-01：新增首页子 tab，用于展示覆盖范围、构建健康度和近期维护队列。
-- 2026-09-03：纳入 CEG5302（Lecture 01–04），内容页增至 49，更新覆盖表与维护队列。
-- 2026-09-07：纳入 CEG5301（Part I Week 01–04），内容页增至 68，更新覆盖表与维护队列。
-- 2026-09-07：纳入 CEG5104（Week 01–03）与 CEG5302 Lecture 05，内容页增至 89，更新覆盖表与维护队列。
-- 2026-09-07：全站图解装修——知识页扩写至约 700–1000 字，新增 54 页 Mermaid 与 16 张课件原图（page/assets），引入资产管道并保证预览/发布可解析。
+- 2026-09-01：页面内容层改用 Markdown、Wiki 链接、表格、GitHub alerts 与 Mermaid，移除 HTML 卡片和状态容器。
+- 2026-09-01：建立首批 CEG5201 导航、资源、要求、CA1 Consultation 和 Week 01–03 页面。
+- 2026-09-03：新增 CEG5302 课程命名空间与 Lecture 01–04 知识页。
+- 2026-09-07：新增 CEG5301 课程命名空间与 Week 01–04 知识页；新增 CEG5104 课程命名空间与 Week 01–03 知识页；CEG5302 扩展至 Lecture 05。
+- 2026-09-11：CEG5302 深度重构，文件名全部规范为 ASCII Canonical Slug，归档 Quiz 20 分真题详解与 Project 工作空间。
+- 2026-09-18：全面拉取已有仓库更新；审计四门课程已下载课件与教学进度；新增 CEG5104 Week 04（NTN 4 篇系统讲义）、CEG5201 Week 04（Chapter 3 4 篇系统讲义）与 Kai Hwang 权威习题题解页；移除独立作业专区；全站课件进度与 Wiki 知识页达成 100% 同步。

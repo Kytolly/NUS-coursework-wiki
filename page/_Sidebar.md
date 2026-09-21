@@ -23,6 +23,11 @@
   - [[CEG5104-Week03-六边形布局与扇区化]]
   - [[CEG5104-Week03-频谱效率与信道分配]]
   - [[CEG5104-Week03-例题与小结]]
+- **Week 04：非地面网络 (NTN)**
+  - [[CEG5104-Week04-非地面网络NTN概述与平台]]
+  - [[CEG5104-Week04-NTN轨道几何与链路容量分析]]
+  - [[CEG5104-Week04-NTN标准化与Beyond-5G演进]]
+  - [[CEG5104-Week04-NTN产业格局与商业模式]]
 - [[CEG5104-当前进度与待补内容]]
 
 **CEG5201**
@@ -32,6 +37,7 @@
   - [[CEG5201-CA与项目文件]]
   - [[CEG5201-Canvas课程链接与工具]]
 - [[CEG5201-课程要求与截止日期]]
+- [[CEG5201-讲义与笔记索引]]
 - **CA1 Consultation**
   - [[CEG5201-CA1-Consultation-总览]]
   - [[CEG5201-CA1-Consultation-项目要求]]
@@ -39,18 +45,25 @@
   - [[CEG5201-CA1-Consultation-提交物与截止日期]]
   - [[CEG5201-CA1-Consultation-问题清单]]
   - [[CEG5201-CA1-Consultation-教师答复与行动项]]
-- **Week 01：现代体系结构**
+- **Week 01：现代体系结构 (Chapter 1)**
   - [[CEG5201-Week01-为什么需要现代并行平台]]
   - [[CEG5201-Week01-嵌入式系统与计算平台选择]]
   - [[CEG5201-Week01-性能度量与可扩展性]]
-- **Week 02：并行编程概念**
+- **Week 02：并行编程概念 (Chapter 2 Part 1)**
   - [[CEG5201-Week02-任务可分性与数据依赖]]
   - [[CEG5201-Week02-Bernstein条件与软件并行性]]
   - [[CEG5201-Week02-粒度通信与网络指标]]
-- **Week 03：多级互连网络**
+- **Week 03：多级互连网络 (Chapter 2 Part 2)**
   - [[CEG5201-Week03-MIN结构与路由]]
   - [[CEG5201-Week03-Blocking与CLOS]]
   - [[CEG5201-Week03-RC粒度比与性能模型]]
+- **Week 04：处理器体系结构与流水线 (Chapter 3)**
+  - [[CEG5201-Week04-现代处理器设计空间与流水线基础]]
+  - [[CEG5201-Week04-CISC微程序与RISC硬布线控制]]
+  - [[CEG5201-Week04-超标量流水线与指令级并行]]
+  - [[CEG5201-Week04-流水线冲突与超流水线向量处理]]
+- **课后习题与解析 (Practice Problems)**
+  - [[CEG5201-Practice-Kai-Hwang-习题精选与解析]]
 - [[CEG5201-当前进度与待补内容]]
 
 **CEG5301**
@@ -79,41 +92,54 @@
 - [[CEG5301-当前进度与待补内容]]
 
 **CEG5302**
-- [[CEG5302-课程总览]]
-- [[CEG5302-课程资源总览]]
-  - [[CEG5302-课件与讲义]]
-- [[CEG5302-课程要求与截止日期]]
-- [[CEG5302-讲义与笔记索引]]
+- [[CEG5302-Course-Overview]]
+- [[CEG5302-Course-Resources]]
+  - [[CEG5302-Course-Materials]]
+- [[CEG5302-Course-Requirements]]
+- [[CEG5302-Lecture-Index]]
+- **Quizzes & Tests (随堂测验与复习)**
+  - [[CEG5302-Quiz-Overview]]
+  - [[CEG5302-Quiz-Past-Paper]]
+  - [[CEG5302-Quiz-Topic-Mapping]]
+  - [[CEG5302-Quiz-Study-Status]]
+- **Group Project (小组大作业)**
+  - [[CEG5302-Project-Overview]]
+  - [[CEG5302-Project-Requirements]]
+  - [[CEG5302-Project-Part-I]]
+  - [[CEG5302-Project-Part-II]]
+  - [[CEG5302-Project-Implementation-Log]]
+  - [[CEG5302-Project-Experiment-Log]]
+  - [[CEG5302-Project-Submission-Checklist]]
 - **Lecture 01：进化计算导论**
-  - [[CEG5302-Lecture01-进化计算导论]]
-  - [[CEG5302-Lecture01-自然进化隐喻与基本循环]]
-  - [[CEG5302-Lecture01-四类问题与工程应用]]
+  - [[CEG5302-Lecture01-Introduction-to-EC]]
+  - [[CEG5302-Lecture01-Evolution-Metaphor-and-Basic-Cycle]]
+  - [[CEG5302-Lecture01-Problem-Types-and-Applications]]
 - **Lecture 02：问题建模与 EA 组件**
-  - [[CEG5302-Lecture02-问题类型与单目标优化]]
-  - [[CEG5302-Lecture02-计算复杂度与进化计算动机]]
-  - [[CEG5302-Lecture02-EA七大组件]]
-  - [[CEG5302-Lecture02-CanonicalGA与手算示例]]
+  - [[CEG5302-Lecture02-Problem-Types-and-Single-Objective]]
+  - [[CEG5302-Lecture02-Computational-Complexity-and-EC-Motivation]]
+  - [[CEG5302-Lecture02-EA-Seven-Components]]
+  - [[CEG5302-Lecture02-Canonical-GA-Worked-Example]]
 - **Lecture 03：表示与变异**
-  - [[CEG5302-Lecture03-表示的概念与选择准则]]
-  - [[CEG5302-Lecture03-Binary与Integer表示]]
-  - [[CEG5302-Lecture03-Real表示的变异]]
-  - [[CEG5302-Lecture03-Real表示的重组]]
-  - [[CEG5302-Lecture03-Permutation表示]]
-  - [[CEG5302-Lecture03-Tree表示与Crossover一般结论]]
+  - [[CEG5302-Lecture03-Representation-Concepts-and-Criteria]]
+  - [[CEG5302-Lecture03-Binary-and-Integer-Representation]]
+  - [[CEG5302-Lecture03-Real-Valued-Mutation]]
+  - [[CEG5302-Lecture03-Real-Valued-Recombination]]
+  - [[CEG5302-Lecture03-Permutation-Representation]]
+  - [[CEG5302-Lecture03-Tree-Representation-and-Crossover-Conclusions]]
 - **Lecture 04：选择与种群管理**
-  - [[CEG5302-Lecture04-种群管理模型与FPS及Ranking]]
-  - [[CEG5302-Lecture04-RWS与Tournament等选择]]
-  - [[CEG5302-Lecture04-SurvivorSelection与选择压力]]
-  - [[CEG5302-Lecture04-多样性维持与Niching]]
-  - [[CEG5302-Lecture04-Island与CellularEA及MATLAB]]
+  - [[CEG5302-Lecture04-Population-Models-FPS-and-Ranking]]
+  - [[CEG5302-Lecture04-RWS-Tournament-and-Selection-Schemes]]
+  - [[CEG5302-Lecture04-Survivor-Selection-and-Selection-Pressure]]
+  - [[CEG5302-Lecture04-Diversity-Maintenance-and-Niching]]
+  - [[CEG5302-Lecture04-Island-Cellular-EA-and-MATLAB]]
 - **Lecture 05：约束处理**
-  - [[CEG5302-Lecture05-约束处理概览与分类]]
-  - [[CEG5302-Lecture05-罚函数原理]]
-  - [[CEG5302-Lecture05-罚函数类型与要点]]
-- [[CEG5302-当前进度与待补内容]]
+  - [[CEG5302-Lecture05-Constraint-Handling-Overview]]
+  - [[CEG5302-Lecture05-Penalty-Functions-Principles]]
+  - [[CEG5302-Lecture05-Penalty-Function-Types-and-Key-Points]]
+- [[CEG5302-Course-Progress]]
 
 **规划中**
-- CEG5104：Week 4 及以后（移动性/5G）待取得正式课件；CA1/CA2 与期末日期待核实
-- CEG5201：Week 04 及以后待取得并核对正式讲义；CA2 待发布 project brief
-- CEG5301：Week 5–6（Part I）及 Part II 强化学习课件待取得；作业/期末考试细则待公告
-- CEG5302：Lecture 06 及以后待取得正式课件；三次测试/编程作业细则待公布
+- CEG5104：Week 01–04 已全面归档；Week 05 待取得后续正式课件；CA1 待发布
+- CEG5201：Week 01–04 及 Kai Hwang 题解已全面归档；CA1 已完成；CA2 待发布
+- CEG5301：Week 01–04 已全面归档；Week 5–6（Part I）及 Part II 课件待取得
+- CEG5302：Lecture 01–05 及 Project 规范已全面归档；Lecture 06 及以后课件待取得

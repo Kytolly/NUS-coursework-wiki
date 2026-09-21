@@ -21,7 +21,7 @@
 
 ## Baseline 网络与自路由
 
-Baseline 网络是基于**完美洗牌（perfect shuffle）**交换模式的再循环/多级网络。对 `n` 位地址 `(x_{n−1},…,x_0)`，`Shuffle` 把最高位移到最低位（第 4 页）。Baseline 的每级由 2×2 交换单元组成，控制位按目的地址的比特从 MSB 到 LSB 决定“0-上、1-下”，因此具有**自路由（self-routing）**能力（第 5 页）。对 `N=2^n` 个端点的典型二元 MIN，约需 `n=log2 N` 级；每级、每路的控制与级数取决于网络族与讲义图示。
+Baseline 网络是基于**完美洗牌（perfect shuffle）**交换模式的再循环/多级网络。对 $n$ 位地址 $(x_{n-1},\dots,x_0)$，$\text{Shuffle}$ 把最高位移到最低位（第 4 页）。Baseline 的每级由 $2 \times 2$ 交换单元组成，控制位按目的地址的比特从 MSB 到 LSB 决定“0-上、1-下”，因此具有**自路由（self-routing）**能力（第 5 页）。对 $N=2^n$ 个端点的典型二元 MIN，约需 $n=\log_2 N$ 级；每级、每路的控制与级数取决于网络族与讲义图示。
 
 ![Baseline MIN 网络：自路由与地址标签](assets/CEG5201/fig-003-baseline-min.png)
 

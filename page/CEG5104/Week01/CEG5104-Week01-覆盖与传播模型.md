@@ -19,20 +19,26 @@
 **两径模型（two-ray）**：适合高于 50 m 的高塔系统，以及城市中对视距传输的微小区系统。（来源：1_network_planning.pdf 第 61 页。）
 
 **宏小区模型——Okumura–Hata**：适用于 150–1000 MHz 与 1500–2000 MHz、距离 1–20 km：
-```text
-L = A + B·log f − 13.82·log h_b − a(h_m) + (44.9 − 6.55·log h_b)·log d + L_other
-```
-其中 f 为频率（MHz），h_b（课件正文又写作 h_bts）为 BTS 天线高度（m），h_m 为 MS 天线高度，d 为 km，L_other 为地物衰减。常数：150–1000 MHz 时 A=69.55、B=26.16；1000–2000 MHz 时 A=46.3、B=33.9。a(h_m) 对小/中城市取 $(1.1\log f_c-0.7)h_m-(1.56\log f_c-0.8)$；大城市分频段取 $8.29(\log 1.54h_m)^2-1.1$（≤300 MHz）或 $3.2(\log 11.75h_m)^2-4.97$（≥300 MHz）。注意：这里 a(h_m) 是单独减去的一项，**不是**乘到距离系数上（常见易错点）。（来源：1_network_planning.pdf 第 62–63 页。）
+
+$$
+L = A + B \log f - 13.82 \log h_b - a(h_m) + (44.9 - 6.55 \log h_b) \log d + L_{\text{other}}
+$$
+
+其中 $f$ 为频率（MHz），$h_b$（课件正文又写作 $h_{\text{bts}}$）为 BTS 天线高度（m），$h_m$ 为 MS 天线高度，$d$ 为 km，$L_{\text{other}}$ 为地物衰减。常数：150–1000 MHz 时 $A=69.55$、$B=26.16$；1000–2000 MHz 时 $A=46.3$、$B=33.9$。$a(h_m)$ 对小/中城市取 $(1.1\log f_c-0.7)h_m-(1.56\log f_c-0.8)$；大城市分频段取 $8.29(\log 1.54h_m)^2-1.1$（$\le 300\text{ MHz}$）或 $3.2(\log 11.75h_m)^2-4.97$（$\ge 300\text{ MHz}$）。注意：这里 $a(h_m)$ 是单独减去的一项，**不是**乘到距离系数上（常见易错点）。（来源：1_network_planning.pdf 第 62–63 页。）
 
 **微小区模型——Walfish–Ikegami**：适用于 800–2000 MHz、建筑高度到 50 m、距离到 5 km。视距：
-```text
-P = 42.6 + 26·log d + 20·log f
-```
+
+$$
+P = 42.6 + 26 \log d + 20 \log f
+$$
+
 非视距（NLOS）：
-```text
-P = 32.4 + 20·log f + 20·log d + L_rds + L_ms
-```
-L_rds 为屋顶到街道衍射损耗，L_ms 为多屏损耗。（来源：1_network_planning.pdf 第 64 页。）
+
+$$
+P = 32.4 + 20 \log f + 20 \log d + L_{\text{rds}} + L_{\text{ms}}
+$$
+
+$L_{\text{rds}}$ 为屋顶到街道衍射损耗，$L_{\text{ms}}$ 为多屏损耗。（来源：1_network_planning.pdf 第 64 页。）
 
 | 模型 | 适用场景 | 频率/距离 | 关键参数 |
 | --- | --- | --- | --- |
