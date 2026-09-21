@@ -1,0 +1,4 @@
+# MkDocs toolchain for building/publishing the NUS Coursework Wiki site.
+# Pinned so local preview and GitHub Pages builds agree.
+mkdocs-material==9.7.7
+pymdown-extensions==12.0.1

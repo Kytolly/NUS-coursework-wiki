@@ -1,6 +1,9 @@
 site_name: "NUS Coursework Wiki"
 site_description: "NUS Computer Engineering coursework records and deliverables"
 site_author: "Kytolly"
+site_url: "https://kytolly.github.io/NUS-coursework-wiki/"
+repo_url: "https://github.com/Kytolly/NUS-coursework-wiki"
+repo_name: "Kytolly/NUS-coursework-wiki"
 docs_dir: ../build/preview/docs
 site_dir: ../build/preview/site
 use_directory_urls: false

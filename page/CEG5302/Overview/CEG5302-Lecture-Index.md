@@ -70,7 +70,7 @@
 
 - 讲义目录：[CEG5302 Assets Release](https://github.com/Kytolly/NUS-coursework-wiki/releases/tag/CEG5302)（本机核对）。
 - 参考笔记：[CEG5302 Assets Release](https://github.com/Kytolly/NUS-coursework-wiki/releases/tag/CEG5302)。
-- 核对日期：2026-09-07。
+- 核对日期：2026-09-10（包含 Lecture 05）。
 
 ## 下一步
 

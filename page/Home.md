@@ -10,7 +10,7 @@
 | 进行中的课程 | CEG5104、CEG5201、CEG5301、CEG5302 |
 | CEG5104 进度 | **Week 04（课件全覆盖，含 NTN 非地面网络）** |
 | CEG5201 进度 | **Week 04（课件全覆盖，含 Chap 3 与 Kai Hwang 习题）** |
-| CEG5301 进度 | **Week 04（Part I 神经网络全覆盖）** |
+| CEG5301 进度 | **Week 04（Part I Week 01–04 已覆盖；Week 05–06 与 Part II 待补）** |
 | CEG5302 进度 | **Lecture 05（课件全覆盖，含 Quiz 题解与 NSGA-II 项目）** |
 | Wiki 知识覆盖 | CEG5104 Week 01–04；CEG5201 Week 01–04 及 Practice；CEG5301 Week 01–04；CEG5302 Lecture 01–05 及 Quiz/Project |
 | 全站健康度 | [[Wiki状态]] |

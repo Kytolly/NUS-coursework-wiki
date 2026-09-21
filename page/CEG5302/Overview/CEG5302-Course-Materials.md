@@ -36,7 +36,7 @@
 ## 来源
 
 - 课件与配套材料：[CEG5302 Assets Release](https://github.com/Kytolly/NUS-coursework-wiki/releases/tag/CEG5302)（PDF 原件，本机核对）。
-- 核对日期：2026-09-07。
+- 核对日期：2026-09-10（包含 Lecture 5，文件日期为 2026-09-10）。
 
 ## 下一步
 

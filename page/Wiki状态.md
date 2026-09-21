@@ -3,8 +3,8 @@
 - 主题：NUS Computer Engineering coursework 记录与产出归档
 - 读者：本人复习、项目准备和提交前核对；必要时供协作者阅读
 - 组织方式：课程命名空间 → 资源 / 要求 / 周次·讲次知识页 / 产出
-- 当前课程：CEG5104（Week 04 课件全覆盖）、CEG5201（Week 04 课件全覆盖）、CEG5301（Week 04 Part I 全覆盖）、CEG5302（Lecture 05 全覆盖）
-- 当前覆盖：CEG5104 Week 01–04（含 NTN）；CEG5201 Week 01–04（含 Chap 3 与 Kai Hwang 习题）；CEG5301 Week 01–04（Part I 神经网络全覆盖）；CEG5302 Lecture 01–05（含 Quiz 题解与 Project 规范）
+- 当前课程：CEG5104（Week 04 已取得课件覆盖）、CEG5201（Week 04 已取得课件覆盖）、CEG5301（Part I Week 01–04 已取得课件覆盖）、CEG5302（Lecture 05 已取得课件覆盖）
+- 当前覆盖：CEG5104 Week 01–04（含 NTN）；CEG5201 Week 01–04（含 Chap 3 与 Kai Hwang 习题）；CEG5301 Part I Week 01–04（Week 05–06 与 Part II 待补）；CEG5302 Lecture 01–05（含 Quiz 题解与 Project 规范）
 - 正式来源优先级：最新 assessment brief/rubric/公告 → 老师讲义 → 教师/TA 答复 → 个人笔记
 - 发布方式：GitHub Wiki 扁平页面 + MkDocs 本地预览
 
@@ -41,7 +41,7 @@
 - [x] Week 01 讲义拆分页（3 个主题页）
 - [x] Week 02 讲义拆分页（3 个主题页）
 - [x] Week 03 讲义拆分页（3 个主题页）
-- [x] Week 04 讲义拆分页（4 个主题页：训练模式与归一化、隐层设计与SVD、泛化与正则化、SOM）
+- [x] Week 04 讲义拆分页（4 个主题页：训练模式与归一化、隐层设计与选择、泛化与正则化、SOM）
 - [x] CEG5301 当前进度与待补内容
 - [ ] CEG5301 Week 5–6（Part I 后续）及 Part II 强化学习课件（等待发布）
 - [x] CEG5302 课程总览
@@ -72,4 +72,4 @@
 - 2026-09-03：新增 CEG5302 课程命名空间与 Lecture 01–04 知识页。
 - 2026-09-07：新增 CEG5301 课程命名空间与 Week 01–04 知识页；新增 CEG5104 课程命名空间与 Week 01–03 知识页；CEG5302 扩展至 Lecture 05。
 - 2026-09-11：CEG5302 深度重构，文件名全部规范为 ASCII Canonical Slug，归档 Quiz 20 分真题详解与 Project 工作空间。
-- 2026-09-18：全面拉取已有仓库更新；审计四门课程已下载课件与教学进度；新增 CEG5104 Week 04（NTN 4 篇系统讲义）、CEG5201 Week 04（Chapter 3 4 篇系统讲义）与 Kai Hwang 权威习题题解页；移除独立作业专区；全站课件进度与 Wiki 知识页达成 100% 同步。
+- 2026-09-18：全面核对四门课程已下载课件与教学进度；新增 CEG5104 Week 04（NTN 4 篇系统讲义）、CEG5201 Week 04（Chapter 3 4 篇系统讲义）与 Kai Hwang 权威习题题解页；移除独立作业专区；Wiki 与当前已下载课件进度同步，未取得的后续课件继续标为待补。

@@ -15,7 +15,7 @@ CEG5302 的 21 个知识页在 2026-09-09 完成一轮“从速查笔记 → 可
 - **图意解析**（fitness landscape、mutation 几何、可行域、island ring、cellular 扩散、fitness sharing 等）与 **完整 worked examples**（Simple GA 一代手算、RWS/SRWS、uniform crossover mask、PMX 手算、罚函数数值）；
 - **方法比较表**（FPS/Ranking、RWS/SRWS/SUS、real 重组、penalty 四类型、explicit/implicit niching）与 **跨讲链接**（Exploration↔Exploitation、Selection Pressure、Diversity、Feasibility 四条主线）。
 
-## 截至 Lecture 05（2026-09-07）
+## 截至 Lecture 05（2026-09-10）
 
 | 内容 | 状态 | 说明 |
 |---|---|---|

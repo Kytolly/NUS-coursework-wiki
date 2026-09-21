@@ -1,0 +1,69 @@
+name: Deploy Wiki to GitHub Pages
+
+# Builds the MkDocs site from the canonical Markdown in page/ and publishes it to
+# GitHub Pages. The generated tree (build/) is never committed: script/build.py
+# projects page/ into build/preview/docs, then MkDocs renders build/preview/site.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment, but never cancel an in-progress one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: script/requirements.txt
+
+      - name: Install MkDocs toolchain
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r script/requirements.txt
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Project page/ into the MkDocs docs tree
+        run: python script/build.py
+
+      - name: Build the site
+        run: mkdocs build -f script/mkdocs.yml
+
+      - name: Disable Jekyll processing
+        run: touch build/preview/site/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/preview/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
