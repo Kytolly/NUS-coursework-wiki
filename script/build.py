@@ -151,6 +151,18 @@ RENAME_MAP = {
     "CEG5302-Lecture05-约束处理概览与分类": "CEG5302-Lecture05-Constraint-Handling-Overview",
     "CEG5302-Lecture05-罚函数原理": "CEG5302-Lecture05-Penalty-Functions-Principles",
     "CEG5302-Lecture05-罚函数类型与要点": "CEG5302-Lecture05-Penalty-Function-Types-and-Key-Points",
+    # CEG5201 Week01 Backward Compatibility Mappings
+    "CEG5201-Week01-为什么需要现代并行平台": "CEG5201-Week01-01-现代计算需求与硬件演进",
+    "CEG5201-Week01-嵌入式系统与计算平台选择": "CEG5201-Week01-02-嵌入式系统与计算平台选择",
+    "CEG5201-Week01-并发并行与Flynn体系分类": "CEG5201-Week01-03-现代计算系统与Flynn分类",
+    "CEG5201-Week01-性能度量与计算吞吐率": "CEG5201-Week01-04-性能度量与计算吞吐率",
+    "CEG5201-Week01-多处理器体系结构与系统设计流": "CEG5201-Week01-07-NUMA架构与多处理器设计流",
+    "CEG5201-Week01-算法复杂度与P-NP理论": "CEG5201-Week01-08-Vector-SIMD与算法复杂度理论",
+    "CEG5201-Week01-PRAM理论模型与变体比较": "CEG5201-Week01-09-PRAM理论模型与变体比较",
+    "CEG5201-Week01-并行算法例题-矩阵乘法": "CEG5201-Week01-10-并行算法例题-矩阵乘法与Prefix-Sum",
+    "CEG5201-Week01-并行算法例题-Prefix-Sum与归约": "CEG5201-Week01-10-并行算法例题-矩阵乘法与Prefix-Sum",
+    "CEG5201-Week01-Amdahl定律与可扩展性分析": "CEG5201-Week01-11-Amdahl定律与可扩展性",
+    "CEG5201-Week01-集群计算Cloud与虚拟化": "CEG5201-Week01-13-Annex-集群计算Cloud与虚拟化",
 }
 
 
