@@ -1,7 +1,7 @@
 # Kai Hwang《高等计算机体系结构》精选习题与解析
 
 > 本页属于：CEG5201 / 习题与练习 (Practice Problems)
-> 前置知识：[[CEG5201-Week01-性能度量与可扩展性]]、[[CEG5201-Week02-Bernstein条件与软件并行性]]、[[CEG5201-Week03-Blocking与CLOS]]、[[CEG5201-Week04-流水线冲突与超流水线向量处理]]
+> 前置知识：[[CEG5201-Week01-性能度量与计算吞吐率]]、[[CEG5201-Week01-Amdahl定律与可扩展性分析]]、[[CEG5201-Week02-Bernstein条件与软件并行性]]、[[CEG5201-Week03-Blocking与CLOS]]、[[CEG5201-Week04-流水线冲突与超流水线向量处理]]
 > 预计阅读时间：12 分钟
 
 ---

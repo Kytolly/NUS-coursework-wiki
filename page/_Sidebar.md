@@ -48,7 +48,15 @@
 - **Week 01：现代体系结构 (Chapter 1)**
   - [[CEG5201-Week01-为什么需要现代并行平台]]
   - [[CEG5201-Week01-嵌入式系统与计算平台选择]]
-  - [[CEG5201-Week01-性能度量与可扩展性]]
+  - [[CEG5201-Week01-性能度量与计算吞吐率]]
+  - [[CEG5201-Week01-并发并行与Flynn体系分类]]
+  - [[CEG5201-Week01-多处理器体系结构与系统设计流]]
+  - [[CEG5201-Week01-算法复杂度与P-NP理论]]
+  - [[CEG5201-Week01-PRAM理论模型与变体比较]]
+  - [[CEG5201-Week01-并行算法例题-矩阵乘法]]
+  - [[CEG5201-Week01-并行算法例题-Prefix-Sum与归约]]
+  - [[CEG5201-Week01-Amdahl定律与可扩展性分析]]
+  - [[CEG5201-Week01-集群计算Cloud与虚拟化]]
 - **Week 02：并行编程概念 (Chapter 2 Part 1)**
   - [[CEG5201-Week02-任务可分性与数据依赖]]
   - [[CEG5201-Week02-Bernstein条件与软件并行性]]

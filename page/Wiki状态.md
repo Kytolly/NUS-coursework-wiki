@@ -3,7 +3,7 @@
 - 主题：NUS Computer Engineering coursework 记录与产出归档
 - 读者：本人复习、项目准备和提交前核对；必要时供协作者阅读
 - 组织方式：课程命名空间 → 资源 / 要求 / 周次·讲次知识页 / 产出
-- 当前课程：CEG5104（Week 04 已取得课件覆盖）、CEG5201（Week 04 已取得课件覆盖）、CEG5301（Part I Week 01–04 已取得课件覆盖）、CEG5302（Lecture 05 已取得课件覆盖）
+- 当前课程：CEG5104（Week 04 已取得课件覆盖）、CEG5201（Week 01 深度重构完成，Week 01–04 全覆盖）、CEG5301（Part I Week 01–04 已取得课件覆盖）、CEG5302（Lecture 05 已取得课件覆盖）
 - 当前覆盖：CEG5104 Week 01–04（含 NTN）；CEG5201 Week 01–04（含 Chap 3 与 Kai Hwang 习题）；CEG5301 Part I Week 01–04（Week 05–06 与 Part II 待补）；CEG5302 Lecture 01–05（含 Quiz 题解与 Project 规范）
 - 正式来源优先级：最新 assessment brief/rubric/公告 → 老师讲义 → 教师/TA 答复 → 个人笔记
 - 发布方式：GitHub Wiki 扁平页面 + MkDocs 本地预览
